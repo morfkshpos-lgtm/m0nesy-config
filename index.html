@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>m0NESY — конфиг CS2 | morfikshops</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Manrope:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#eef0f3;--ink:#12171c;--mute:#5b6670;--card:#fff;--line:#dde1e6;--pv:#0f1418;--y:#ffd60a;--ac:#2563eb;--glow:rgba(255,214,10,.25);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0e12;--ink:#eef1f4;--mute:#8d99a4;--card:#141a20;--line:#232c34;--ac:#6ea0ff;--glow:rgba(255,214,10,.14)}}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Manrope,"Segoe UI",system-ui,sans-serif;
+background-image:radial-gradient(60rem 28rem at 85% -10%,var(--glow),transparent 60%)}
+main{max-width:980px;margin:0 auto;padding:18px 14px 40px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:6px 14px 6px 8px;font-weight:700;font-size:.85rem}
+.pill i{width:22px;height:22px;border-radius:50%;background:var(--y);display:grid;place-items:center;color:#12171c;font:800 .7rem Unbounded,sans-serif;font-style:normal}
+.tag{color:var(--mute);font-size:.85rem}
+h1{font:800 clamp(2.6rem,12vw,6rem)/.95 Unbounded,"Arial Black",sans-serif;letter-spacing:-.04em;margin:6px 0 10px}
+.sub{color:var(--mute);max-width:34rem;margin:0 0 22px}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.c{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;grid-column:span 6}
+.c h2{font:600 .95rem Unbounded,sans-serif;margin:0 0 12px}
+.pv{background:var(--pv);color:#fff;border-color:#243039}
+.pv svg{display:block;width:100%;height:200px;border-radius:12px;background:
+linear-gradient(#ffffff08 1px,transparent 1px) 0 0/24px 24px,linear-gradient(90deg,#ffffff08 1px,transparent 1px) 0 0/24px 24px,#1a232a}
+.ctl{display:grid;grid-template-columns:auto 1fr 1.5em;gap:8px 12px;align-items:center;margin-top:14px;font-size:.85rem;color:#c5ced6}
+.ctl input{width:100%;accent-color:var(--y)}
+.ctl b{text-align:right;color:#fff}
+.stat b{display:block;font:800 clamp(2rem,9vw,2.8rem)/1 Unbounded,sans-serif}
+.stat span{color:var(--mute);font-size:.85rem}
+.stat.hl{background:var(--y);border-color:var(--y);color:#12171c}
+.stat.hl span{color:#3d3500}
+.row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-top:1px solid var(--line);font-size:.93rem}
+.row:first-of-type{border-top:0}
+.row span{color:var(--mute)}
+.row b{text-align:right}
+pre{margin:0;padding:14px;overflow-x:auto;font:13px/1.6 ui-monospace,Menlo,Consolas,monospace;background:var(--bg);border-radius:12px}
+button{margin-top:12px;font:700 .95rem Manrope,sans-serif;padding:11px 18px;border:0;border-radius:12px;background:var(--y);color:#12171c;cursor:pointer}
+button:focus-visible,input:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.brand{background:var(--ink);color:var(--bg);text-align:center;padding:26px 18px}
+.brand b{font:800 clamp(1.3rem,6vw,2rem)/1.2 Unbounded,sans-serif;display:block}
+.brand span{opacity:.7;font-size:.9rem}
+.brand em{font-style:normal;color:var(--y)}
+@media(min-width:720px){.c.s2{grid-column:span 2}.c.s3{grid-column:span 3}.c.s4{grid-column:span 4}}
+</style>
+</head>
+<body>
+<main>
+<div class="top">
+<span class="pill"><i>m</i>Сделал morfikshops</span>
+<span class="tag">CS2 · 2026</span>
+</div>
+<h1>m0NESY</h1>
+<p class="sub">Полный конфиг из Counter-Strike 2: мышь, прицел, viewmodel, экран, графика и радар. Всё в одном месте.</p>
+
+<div class="grid">
+<div class="c s4 pv">
+<h2>Прицел</h2>
+<svg id="xh" viewBox="-60 -50 120 100" aria-label="Предпросмотр прицела"></svg>
+<div class="ctl">
+<label for="len">Length</label><input id="len" type="range" min="0" max="10" value="4"><b id="lv"></b>
+<label for="thk">Thickness</label><input id="thk" type="range" min="0" max="5" value="1"><b id="tv"></b>
+<label for="gap">Gap</label><input id="gap" type="range" min="-5" max="10" value="2"><b id="gv"></b>
+</div>
+</div>
+<div class="c s2" style="display:grid;gap:12px;padding:0;background:none;border:0">
+<div class="c stat hl"><b>920</b><span>eDPI</span></div>
+<div class="c stat"><b>400</b><span>DPI · 2.3 sens · 2000 Hz</span></div>
+</div>
+<div id="secs" style="display:contents"></div>
+
+<div class="c s3"><h2>Консоль / autoexec.cfg</h2><pre id="cfg"></pre><button id="copy">Скопировать конфиг</button></div>
+<div class="c brand"><b>Ждём вас ещё в <em>morfikshops</em></b><span>Сделал morfikshops · настройки m0NESY для CS2</span></div>
+</div>
+</main>
+
+<script>
+const S=[
+["Мышь","s3",[["DPI","400"],["Sensitivity","2.3"],["eDPI","920"],["Zoom Sensitivity","1"],["Polling rate","2000 Hz"],["Windows Sensitivity","6"]]],
+["Прицел","s3",[["Style","Static"],["Length","4"],["Thickness","1"],["Gap","2"],["Color","Yellow"],["Dot","No"],["Outline","No"]]],
+["Viewmodel","s2",[["FOV","68"],["Offset X","2.5"],["Offset Y","0"],["Offset Z","-1.5"],["Bob","False"]]],
+["Экран","s2",[["Resolution","1280×960"],["Aspect Ratio","4:3"],["Scaling","Stretched"],["Brightness","93%"],["Display Mode","Fullscreen"]]],
+["HUD и радар","s2",[["HUD Scale","1"],["HUD Color","Blue"],["Radar Centers Player","Yes"],["Radar Rotating","Yes"],["Radar HUD Size","0.91"],["Radar Map Zoom","0.4"]]],
+["Графика","s3",[["Boost Player Contrast","Enabled"],["V-Sync","Disabled"],["NVIDIA Reflex","Disabled"],["MSAA","8x"],["Global Shadow Quality","High"],["Dynamic Shadows","All"],["Model / Texture Detail","Low"],["Texture Filtering","Bilinear"],["Shader Detail","Low"],["Particle Detail","Low"],["Ambient Occlusion","Disabled"]]],
+];
+const $=id=>document.getElementById(id);
+$("secs").innerHTML=S.map(([t,w,r])=>`<div class="c ${w}"><h2>${t}</h2>${r.map(([k,v])=>`<div class="row"><span>${k}</span><b>${v}</b></div>`).join("")}</div>`).join("")+
+`<div class="c s3"><h2>Параметры запуска</h2><div class="row"><span>Launch options</span><b>нет</b></div></div>`;
+
+function draw(){
+const l=+$("len").value,g=+$("gap").value,s=3,o=(g+3)*s,L=l*s,w=Math.max(+$("thk").value,.5)*s*.9+.6,f='fill="#ffd60a"';
+$("lv").textContent=l;$("tv").textContent=$("thk").value;$("gv").textContent=g;
+$("xh").innerHTML=`<rect x="${o}" y="${-w/2}" width="${L}" height="${w}" ${f}/><rect x="${-o-L}" y="${-w/2}" width="${L}" height="${w}" ${f}/><rect x="${-w/2}" y="${o}" width="${w}" height="${L}" ${f}/><rect x="${-w/2}" y="${-o-L}" width="${w}" height="${L}" ${f}/>`;
+}
+["len","thk","gap"].forEach(i=>$(i).oninput=draw);draw();
+
+const cfg=`// m0NESY — CS2 | morfikshops
+sensitivity 2.3
+zoom_sensitivity_ratio 1
+cl_crosshairstyle 4
+cl_crosshairsize 4
+cl_crosshairthickness 1
+cl_crosshairgap 2
+cl_crosshaircolor 2
+cl_crosshairdot 0
+cl_crosshair_drawoutline 0
+viewmodel_fov 68
+viewmodel_offset_x 2.5
+viewmodel_offset_y 0
+viewmodel_offset_z -1.5
+cl_hud_color 3
+cl_radar_always_centered 1
+cl_radar_rotate 1
+cl_hud_radar_scale 0.91
+cl_radar_scale 0.4`;
+$("cfg").textContent=cfg;
+$("copy").onclick=async()=>{try{await navigator.clipboard.writeText(cfg);$("copy").textContent="Скопировано"}catch(e){$("copy").textContent="Выдели текст вручную"}};
+</script>
+</body>
+</html>
